@@ -1,0 +1,10 @@
+
+; Extensiones agregadas para Composer
+extension=curl
+extension=mbstring
+extension=openssl
+extension=fileinfo
+
+allow_url_fopen = On
+
+extension_dir = "ext"
