@@ -4,13 +4,18 @@ nixPkgs = ['nodejs-18_x', 'php81', 'php81Packages.composer']
 [phases.install]
 cmds = [
     'composer install --no-dev --optimize-autoloader',
-    'php artisan config:cache',
-    'php artisan route:cache',
-    'php artisan view:cache'
+    'mkdir -p storage/logs storage/framework/cache storage/framework/sessions storage/framework/views',
+    'chmod -R 775 storage bootstrap/cache'
 ]
 
 [phases.build]
-cmds = ['php artisan l5-swagger:generate']
+cmds = [
+    'php artisan config:cache',
+    'php artisan route:cache',
+    'php artisan view:cache',
+    'php artisan migrate --force',
+    'php artisan l5-swagger:generate'
+]
 
 [start]
 cmd = 'php artisan serve --host=0.0.0.0 --port=$PORT'
