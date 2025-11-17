@@ -10,8 +10,8 @@ namespace App\Swagger;
  * )
  *
  * @OA\Server(
- *   url="http://127.0.0.1:8000",
- *   description="Servidor local"
+ *   url="https://dp-core-production.up.railway.app",
+ *   description="Servidor publicado en Railway"
  * )
  *
  * @OA\SecurityScheme(
