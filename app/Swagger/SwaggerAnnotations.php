@@ -10,8 +10,8 @@ namespace App\Swagger;
  * )
  *
  * @OA\Server(
- *   url="https://dp-core-production.up.railway.app",
- *   description="Servidor publicado en Railway"
+ *   url=L5_SWAGGER_CONST_HOST,
+ *   description="Servidor dinámico (local o producción)"
  * )
  *
  * @OA\SecurityScheme(

@@ -19,7 +19,7 @@ cmds = [
     'echo "Running migrations..."',
     'php artisan migrate --force || echo "Migrations failed but continuing..."',
     'echo "Generating Swagger documentation..."',
-    'php artisan l5-swagger:generate || echo "Swagger generation failed but continuing..."',
+    'php artisan l5-swagger:generate --all',
     'echo "Build phase completed"'
 ]
 
